@@ -1,0 +1,105 @@
+# wxRays ukrainian translation.
+# Copyright (C) 2030
+# This file is distributed under the same license as the wxRays package.
+#  Serhiy Lysovenko <EMAIL@ADDRESS>, 2013-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.3 \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-30 17:15+0200\n"
+"PO-Revision-Date: 2014-11-10 11:32+0200\n"
+"Last-Translator: Serhiy Lysovenko <EMAIL@ADDRESS>\n"
+"Language-Team: UKRAINIAN <nospam@gmail.com>\n"
+"Language: Ukrainian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+
+#: ../../dialogs.py:33
+msgid "OK"
+msgstr ""
+
+#: ../../dialogs.py:34
+msgid "Cancel"
+msgstr ""
+
+#: ../../face.py:62
+msgid "File"
+msgstr "Файл"
+
+#: ../../face.py:63
+msgid "Settings"
+msgstr "Налаштування"
+
+#: ../../face.py:64
+msgid "Help"
+msgstr "Довідка"
+
+#: ../../face.py:65
+msgid "Pannel Settings"
+msgstr "Налаштування панелі"
+
+#: ../../face.py:72
+msgid "F3 View"
+msgstr "F3 Перегляд"
+
+#: ../../face.py:73
+msgid "F4 Edit"
+msgstr "F4 Редагувати"
+
+#: ../../face.py:73
+msgid "F5 Copy"
+msgstr "F5 Копіювати"
+
+#: ../../face.py:74
+msgid "F6 Move"
+msgstr "F6 Перемістити"
+
+#: ../../face.py:75
+msgid "F7 Make Directory"
+msgstr "F7 Створити каталог"
+
+#: ../../face.py:76
+msgid "F8 Remove"
+msgstr "F8 Видалити"
+
+#: ../../face.py:77
+msgid "F10 Exit"
+msgstr "F10 Вихід"
+
+#: ../../face.py:109
+msgid "Parrent directory can not be copied"
+msgstr ""
+
+#: ../../face.py:112
+#, python-format
+msgid "Copy file %(file)s to %(outdir)s"
+msgstr ""
+
+#: ../../face.py:115
+#, python-format
+msgid "Copy %(n)d files to %(outdir)s"
+msgstr ""
+
+#: ../../panel.py:106
+msgid "Name"
+msgstr "Назва"
+
+#: ../../panel.py:107
+msgid "Size"
+msgstr "Розмір"
+
+#: ../../panel.py:107
+msgid "Date"
+msgstr "Дата"
+
+#: ../../panel.py:108
+msgid "Attr."
+msgstr "Атр."
+
+#. NOTE: Mentions of letters are: X - execute, W - write, R - read,
+#. H - hidden, S - symbolic link
+#: ../../panel.py:151
+msgid "XWRHS"
+msgstr "ВЗЧПC"
