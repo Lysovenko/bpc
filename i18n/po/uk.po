@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 0.0.3 \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-13 14:17+0300\n"
-"PO-Revision-Date: 2014-11-10 11:32+0200\n"
+"PO-Revision-Date: 2015-05-13 15:08+0300\n"
 "Last-Translator: Serhiy Lysovenko <EMAIL@ADDRESS>\n"
 "Language-Team: UKRAINIAN <nospam@gmail.com>\n"
 "Language: Ukrainian\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../../dialogs.py:33
 msgid "OK"
-msgstr ""
+msgstr "Гаразд"
 
 #: ../../dialogs.py:34
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: ../../face.py:62
 msgid "File"
@@ -70,17 +70,17 @@ msgstr "F10 Вихід"
 
 #: ../../face.py:109
 msgid "Parrent directory can not be copied"
-msgstr ""
+msgstr "Батьківська директорія не може бути скопійованою"
 
 #: ../../face.py:112
 #, python-format
 msgid "Copy file %(file)s to %(outdir)s"
-msgstr ""
+msgstr "Cкопіювати файл %(file)s до %(outdir)s"
 
 #: ../../face.py:115
 #, python-format
 msgid "Copy %(n)d files to %(outdir)s"
-msgstr ""
+msgstr "Cкопіювати %(n)d файлів(и) до %(outdir)s"
 
 #: ../../panel.py:107
 msgid "Name"

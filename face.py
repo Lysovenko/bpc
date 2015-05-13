@@ -114,9 +114,9 @@ class Face:
         else:
             msg = _("Copy %(n)d files to %(outdir)s" % {'n': len(names),
                                                         'outdir': outdir})
-        dlg = AskCopy(self.root, title='Copy', message='copy some somewhere',
-                      settings=self.config)
-        if dlg.result is None:
+        dlg = AskCopy(
+            self.root, title='Copy', message=msg, settings=self.config)
+        if not dlg.result:
             return
         names, errors = active.treater.expand_filenames(names)
         for name in names:
