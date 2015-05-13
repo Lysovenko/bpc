@@ -1,8 +1,5 @@
-# wxRays ukrainian translation.
-# Copyright (C) 2030
-# This file is distributed under the same license as the wxRays package.
-#  Serhiy Lysovenko <EMAIL@ADDRESS>, 2013-2014.
-#
+# BPC ukrainian translation.
+# This file is distributed under the same license as the BPC package.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.3 \n"
