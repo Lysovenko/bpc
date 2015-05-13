@@ -3,3 +3,4 @@ __pycache__
 scms
 i18n/locale
 *.pyc
+i18n/po/TkC.pot

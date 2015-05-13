@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.3 \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-30 17:15+0200\n"
+"POT-Creation-Date: 2015-05-13 14:17+0300\n"
 "PO-Revision-Date: 2014-11-10 11:32+0200\n"
 "Last-Translator: Serhiy Lysovenko <EMAIL@ADDRESS>\n"
 "Language-Team: UKRAINIAN <nospam@gmail.com>\n"
@@ -82,24 +82,24 @@ msgstr ""
 msgid "Copy %(n)d files to %(outdir)s"
 msgstr ""
 
-#: ../../panel.py:106
+#: ../../panel.py:107
 msgid "Name"
 msgstr "Назва"
 
-#: ../../panel.py:107
+#: ../../panel.py:108
 msgid "Size"
 msgstr "Розмір"
 
-#: ../../panel.py:107
+#: ../../panel.py:108
 msgid "Date"
 msgstr "Дата"
 
-#: ../../panel.py:108
+#: ../../panel.py:109
 msgid "Attr."
 msgstr "Атр."
 
 #. NOTE: Mentions of letters are: X - execute, W - write, R - read,
 #. H - hidden, S - symbolic link
-#: ../../panel.py:151
+#: ../../panel.py:152
 msgid "XWRHS"
 msgstr "ВЗЧПC"
