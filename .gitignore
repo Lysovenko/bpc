@@ -2,3 +2,4 @@ __pycache__
 *~
 scms
 i18n/locale
+*.pyc
