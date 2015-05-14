@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.3 \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-14 16:45+0300\n"
-"PO-Revision-Date: 2015-05-14 16:47+0300\n"
+"POT-Creation-Date: 2015-05-14 20:53+0300\n"
+"PO-Revision-Date: 2015-05-14 20:54+0300\n"
 "Last-Translator: Serhiy Lysovenko <EMAIL@ADDRESS>\n"
 "Language-Team: UKRAINIAN <nospam@gmail.com>\n"
 "Language: Ukrainian\n"
@@ -13,19 +13,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: utf-8\n"
 
-#: ../../buttons.py:27
+#: ../../buttons.py:28
 msgid "Parrent directory can not be copied"
 msgstr "Батьківська директорія не може бути скопійованою"
 
-#: ../../buttons.py:30
+#: ../../buttons.py:31
 #, python-format
-msgid "Copy file %(file)s to %(outdir)s"
-msgstr "Cкопіювати файл %(file)s до %(outdir)s"
+msgid "Copy file `%(file)s' to %(outdir)s?"
+msgstr "Cкопіювати файл «%(file)s» до %(outdir)s?"
 
-#: ../../buttons.py:33
+#: ../../buttons.py:34
 #, python-format
-msgid "Copy %(n)d files to %(outdir)s"
-msgstr "Cкопіювати %(n)d файлів(и) до %(outdir)s"
+msgid "Copy %(n)d files to %(outdir)s?"
+msgstr "Cкопіювати %(n)d файлів(и) до %(outdir)s?"
+
+#: ../../buttons.py:37
+msgid "Copy"
+msgstr "Копіювання"
 
 #: ../../dialogs.py:33
 msgid "OK"

@@ -28,13 +28,13 @@ def copy_button(cmdr):
         showerror('Spam', _("Parrent directory can not be copied"))
         return
     if len(names) == 1:
-        msg = _("Copy file %(file)s to %(outdir)s" % {'file': names[0],
-                                                      'outdir': outdir})
+        msg = _("Copy file `%(file)s' to %(outdir)s?") % {'file': names[0],
+                                                         'outdir': outdir}
     else:
-        msg = _("Copy %(n)d files to %(outdir)s" % {'n': len(names),
-                                                    'outdir': outdir})
+        msg = _("Copy %(n)d files to %(outdir)s?") % {'n': len(names),
+                                                     'outdir': outdir}
     dlg = AskCopy(
-        cmdr.root, title='Copy', message=msg, settings=cmdr.config)
+        cmdr.root, title=_("Copy"), message=msg, settings=cmdr.config)
     if not dlg.result:
         return
     names, errors = active.treater.expand_filenames(names)

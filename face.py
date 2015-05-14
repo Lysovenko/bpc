@@ -60,10 +60,10 @@ class Face:
         menu_file = Menu(menubar)
         menu_settings = Menu(menubar)
         menu_help = Menu(menubar)
-        menubar.add_cascade(menu=menu_file, label=_('File'))
-        menubar.add_cascade(menu=menu_settings, label=_('Settings'))
-        menubar.add_cascade(menu=menu_help, label=_('Help'))
-        menu_settings.add_command(label=_('Pannel Settings'),
+        menubar.add_cascade(menu=menu_file, label=_("File"))
+        menubar.add_cascade(menu=menu_settings, label=_("Settings"))
+        menubar.add_cascade(menu=menu_help, label=_("Help"))
+        menu_settings.add_command(label=_("Pannel Settings"),
                                   command=self.dlg_panset)
 
     def add_btns(self):
