@@ -23,6 +23,7 @@ from weakref import ref
 from panel import Panel
 from settings import Config
 from file_consts import *
+import buttons
 
 
 class Face:
@@ -100,31 +101,7 @@ class Face:
         print('F4')
 
     def on_F5(self, evt=None):
-        from io_dialogs import AskCopy
-        from tkinter.messagebox import askyesno, showerror
-        active, passive = self.get_panels()
-        names = active.get_selected_filenames()
-        outdir = passive.pwd.get()
-        if '..' in names:
-            showerror('Spam', _("Parrent directory can not be copied"))
-            return
-        if len(names) == 1:
-            msg = _("Copy file %(file)s to %(outdir)s" % {'file': names[0],
-                                                          'outdir': outdir})
-        else:
-            msg = _("Copy %(n)d files to %(outdir)s" % {'n': len(names),
-                                                        'outdir': outdir})
-        dlg = AskCopy(
-            self.root, title='Copy', message=msg, settings=self.config)
-        if not dlg.result:
-            return
-        names, errors = active.treater.expand_filenames(names)
-        for name in names:
-            try:
-                print((name[FT_NAME]), name[FT_TYPE])
-            except Exception:
-                print(repr(name[FT_NAME]), name[FT_TYPE])
-        print(len(names), errors, sum(i[1][6] for i in names))
+        buttons.copy_button(self)
 
     def on_F6(self, evt=None):
         print('F6')

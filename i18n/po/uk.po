@@ -4,14 +4,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.3 \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-13 14:17+0300\n"
-"PO-Revision-Date: 2015-05-13 15:08+0300\n"
+"POT-Creation-Date: 2015-05-14 16:45+0300\n"
+"PO-Revision-Date: 2015-05-14 16:47+0300\n"
 "Last-Translator: Serhiy Lysovenko <EMAIL@ADDRESS>\n"
 "Language-Team: UKRAINIAN <nospam@gmail.com>\n"
 "Language: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: utf-8\n"
+
+#: ../../buttons.py:27
+msgid "Parrent directory can not be copied"
+msgstr "Батьківська директорія не може бути скопійованою"
+
+#: ../../buttons.py:30
+#, python-format
+msgid "Copy file %(file)s to %(outdir)s"
+msgstr "Cкопіювати файл %(file)s до %(outdir)s"
+
+#: ../../buttons.py:33
+#, python-format
+msgid "Copy %(n)d files to %(outdir)s"
+msgstr "Cкопіювати %(n)d файлів(и) до %(outdir)s"
 
 #: ../../dialogs.py:33
 msgid "OK"
@@ -21,63 +35,49 @@ msgstr "Гаразд"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../../face.py:62
+#: ../../face.py:63
 msgid "File"
 msgstr "Файл"
 
-#: ../../face.py:63
+#: ../../face.py:64
 msgid "Settings"
 msgstr "Налаштування"
 
-#: ../../face.py:64
+#: ../../face.py:65
 msgid "Help"
 msgstr "Довідка"
 
-#: ../../face.py:65
+#: ../../face.py:66
 msgid "Pannel Settings"
 msgstr "Налаштування панелі"
 
-#: ../../face.py:72
+#: ../../face.py:73
 msgid "F3 View"
 msgstr "F3 Перегляд"
 
-#: ../../face.py:73
+#: ../../face.py:74
 msgid "F4 Edit"
 msgstr "F4 Редагувати"
 
-#: ../../face.py:73
+#: ../../face.py:74
 msgid "F5 Copy"
 msgstr "F5 Копіювати"
 
-#: ../../face.py:74
+#: ../../face.py:75
 msgid "F6 Move"
 msgstr "F6 Перемістити"
 
-#: ../../face.py:75
+#: ../../face.py:76
 msgid "F7 Make Directory"
 msgstr "F7 Створити каталог"
 
-#: ../../face.py:76
+#: ../../face.py:77
 msgid "F8 Remove"
 msgstr "F8 Видалити"
 
-#: ../../face.py:77
+#: ../../face.py:78
 msgid "F10 Exit"
 msgstr "F10 Вихід"
-
-#: ../../face.py:109
-msgid "Parrent directory can not be copied"
-msgstr "Батьківська директорія не може бути скопійованою"
-
-#: ../../face.py:112
-#, python-format
-msgid "Copy file %(file)s to %(outdir)s"
-msgstr "Cкопіювати файл %(file)s до %(outdir)s"
-
-#: ../../face.py:115
-#, python-format
-msgid "Copy %(n)d files to %(outdir)s"
-msgstr "Cкопіювати %(n)d файлів(и) до %(outdir)s"
 
 #: ../../panel.py:107
 msgid "Name"
