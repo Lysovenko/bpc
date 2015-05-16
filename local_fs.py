@@ -21,14 +21,11 @@ from stat import S_IFMT, S_IFSOCK, S_IFLNK, S_IFREG, S_IFBLK, \
     S_IFDIR, S_IFCHR, S_IFIFO
 from filesystem import Filesystem
 from file_consts import *
-_filetypes = (('regular', S_IFREG), ('directory', S_IFDIR), ('link', S_IFLNK),
-              ('fifo', S_IFIFO), ('socket', S_IFSOCK), ('block', S_IFBLK),
-              ('character', S_IFCHR))
-if name == 'nt':
+_filetypes = (("regular", S_IFREG), ("directory", S_IFDIR), ("link", S_IFLNK),
+              ("fifo", S_IFIFO), ("socket", S_IFSOCK), ("block", S_IFBLK),
+              ("character", S_IFCHR))
+if name == "nt":
     from ctypes import windll
-# XXX prevent I/O operations
-from test.pseudofile import open
-mkdir = lambda x, y=0: None
 
 
 class Local_fs(Filesystem):
@@ -75,7 +72,7 @@ class Local_fs(Filesystem):
                 file_st = tuple(lstat(file_name))
             except OSError:
                 continue
-            if name == 'nt' and file_st:
+            if name == "nt" and file_st:
                 far_st = windll.kernel32.GetFileAttributesW(file_name)
             elif islink(file_name):
                 try:
@@ -93,10 +90,10 @@ class Local_fs(Filesystem):
             res = res[0] if res else None
         return res
 
-    def open(self, spath, mode='wb'):
+    def open(self, spath, mode="wb"):
         "Obtaining File like object, opened in binary mode for write"
         chdir(self.__pwd)
-        if mode == 'wb':
+        if mode == "wb":
             for i in range(1, len(spath)):
                 pth = join(*spath[:i])
                 if isdir(pth):

@@ -20,9 +20,9 @@ from os.path import isdir, expanduser, join
 
 class Config(dict):
     def __init__(self, filename):
-        if name == 'posix':
+        if name == "posix":
             self.path = expanduser("~/.config/TkC")
-        elif name == 'nt':
+        elif name == "nt":
             if isdir(expanduser("~/Application Data")):
                 self.path = expanduser("~/Application Data/TkC")
             else:
@@ -35,15 +35,15 @@ class Config(dict):
         cfgl = []
         try:
             with open(self.path) as fp:
-                for line in iter(fp.readline, ''):
+                for line in iter(fp.readline, ""):
                     if not line.isspace():
-                        nam, val = line.strip().split('=', 1)
+                        nam, val = line.strip().split("=", 1)
                         cfgl.append((nam, eval(val)))
         except Exception:
             pass
         dict.__init__(self, cfgl)
 
     def save(self):
-        with open(self.path, 'w') as fp:
+        with open(self.path, "w") as fp:
             for n, v in self.items():
                 fp.write("%s=%s\n" % (n, repr(v)))

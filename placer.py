@@ -15,22 +15,22 @@
 
 from os import name, listdir
 from os.path import expanduser, isdir, realpath, join
-if name == 'nt':
+if name == "nt":
     from ctypes import windll
     from string import ascii_uppercase
 
 
 class Placer:
     def __init__(self):
-        if name == 'posix':
+        if name == "posix":
             self.__system_places = self.__posix_places
-        elif name == 'nt':
+        elif name == "nt":
             self.__system_places = self.__nt_places
 
     def placing_items(self):
         "Disks, mountpoints etc"
         os_name = name
-        result = [('Home', expanduser('~'))]
+        result = [("Home", expanduser("~"))]
         result += self.__system_places()
         return result
 
@@ -38,20 +38,20 @@ class Placer:
         result = []
         labels = {}
         titles = {}
-        by_label = '/dev/disk/by-label'
+        by_label = "/dev/disk/by-label"
         if isdir(by_label):
             for label in listdir(by_label):
                 labels[realpath(join(by_label, label))] = label
-        with open('/proc/mounts') as fp:
+        with open("/proc/mounts") as fp:
             for line in fp:
-                device, path, dummy = line.split(' ', 2)
-                if '/' not in device:
+                device, path, dummy = line.split(" ", 2)
+                if "/" not in device:
                     continue
-                spl = path.split('\\')
+                spl = path.split("\\")
                 path = spl[0]
                 for i in spl[1:]:
                     path += chr(int(i[:3], 8)) + i[3:]
-                if device.startswith('/'):
+                if device.startswith("/"):
                     device = realpath(device)
                     device = labels.get(device, device)
                 times = titles.get(device, 0)
@@ -68,5 +68,5 @@ class Placer:
         drives = windll.kernel32.GetLogicalDrives()
         for byte, letter in enumerate(ascii_uppercase):
             if drives & 1 << byte:
-                result.append(('%s:' % letter, '%s:\\' % letter))
+                result.append(("%s:" % letter, "%s:\\" % letter))
         return result

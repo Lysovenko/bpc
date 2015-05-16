@@ -18,7 +18,7 @@ from tkinter.ttk import Label, Progressbar
 
 
 class AskCopy(Dialog):
-    def body(self, master, message='', settings={}):
+    def body(self, master, message="", settings={}):
         self.settings = settings
         lab = Label(master, text=message)
         lab.pack()

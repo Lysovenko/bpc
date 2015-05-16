@@ -15,9 +15,9 @@
 
 from stat import *
 from file_consts import *
-_filetypes = {S_IFREG: 'regular', S_IFDIR: 'directory', S_IFLNK: 'link',
-              S_IFIFO: 'fifo', S_IFSOCK: 'socket', S_IFBLK: 'block',
-              S_IFCHR: 'character'}
+_filetypes = {S_IFREG: "regular", S_IFDIR: "directory", S_IFLNK: "link",
+              S_IFIFO: "fifo", S_IFSOCK: "socket", S_IFBLK: "block",
+              S_IFCHR: "character"}
 
 
 class Filesystem:
@@ -29,16 +29,16 @@ class Filesystem:
             if type(far_stat) is int:
                 hidden = bool(far_stat & 2)
             else:
-                hidden = file_name.startswith('.')
+                hidden = file_name.startswith(".")
             st = far_stat if type(far_stat) is tuple else file_stat
             mode |= M_HIDDEN if hidden else 0
             mode |= M_SYMLINK if S_ISLNK(file_stat[ST_MODE]) else 0
             visible = True
             if hidden:
-                visible = visibility.get('show_hidden_files', False)
-            if file_name.endswith('~'):
+                visible = visibility.get("show_hidden_files", False)
+            if file_name.endswith("~"):
                 visible = visible and visibility.get(
-                    'show_backup_files', False)
+                    "show_backup_files", False)
             if visible:
                 file_type = _filetypes.get(S_IFMT(st[ST_MODE]))
                 result.append((file_name, file_type, st[ST_SIZE],

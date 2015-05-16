@@ -51,15 +51,15 @@ class Dialog(Toplevel):
         return
 
     def button_box(self):
-        separ = Separator(self, orient='horizontal')
-        separ.pack(expand=1, fill='x')
+        separ = Separator(self, orient="horizontal")
+        separ.pack(expand=1, fill="x")
         box = Frame(self)
         b = Button(box, text=self.btn_ok_text, width=10,
-                   command=self.accept, default='active')
-        b.pack(side='left', padx=5, pady=5)
+                   command=self.accept, default="active")
+        b.pack(side="left", padx=5, pady=5)
         b = Button(box, text=self.btn_cancel_text, width=10,
                    command=self.destroy)
-        b.pack(side='right', padx=5, pady=5)
+        b.pack(side="right", padx=5, pady=5)
         self.bind("<Return>", self.accept)
         self.bind("<Escape>", self.destroy)
         box.pack()
@@ -91,10 +91,10 @@ class Dialog(Toplevel):
         return None
 
     def apply(self):
-        '''process the data
+        """process the data
         This method is called automatically to process the data, *after*
         the dialog is destroyed. By default, it does nothing.
-        '''
+        """
         pass
 
 
@@ -102,17 +102,17 @@ class Dlg_panset(Dialog):
     def __init__(self, parent, cfg):
         self.config = cfg
         self.is_hidden = IntVar()
-        self.is_hidden.set(cfg.get('show_hidden_files', 0))
+        self.is_hidden.set(cfg.get("show_hidden_files", 0))
         self.is_backup = IntVar()
-        self.is_backup.set(cfg.get('show_backup_files', 0))
+        self.is_backup.set(cfg.get("show_backup_files", 0))
         Dialog.__init__(self, parent, title="Panel settings")
 
     def body(self, master):
         "place user dialog widgets"
-        chk1 = Checkbutton(master, text='Show hidden files',
+        chk1 = Checkbutton(master, text="Show hidden files",
                            variable=self.is_hidden)
         chk1.pack()
-        chk2 = Checkbutton(master, text='Show backup files',
+        chk2 = Checkbutton(master, text="Show backup files",
                            variable=self.is_backup)
         chk2.pack()
         self.resizable(width=0, height=0)
@@ -120,11 +120,11 @@ class Dlg_panset(Dialog):
 
     def apply(self):
         "On ok button pressed"
-        self.config['show_hidden_files'] = self.is_hidden.get()
-        self.config['show_backup_files'] = self.is_backup.get()
+        self.config["show_hidden_files"] = self.is_hidden.get()
+        self.config["show_backup_files"] = self.is_backup.get()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     from tkinter import Tk, Button
     root = Tk()
     Button(root, text="Hello!").pack()

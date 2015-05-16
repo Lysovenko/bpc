@@ -24,15 +24,15 @@ def copy_button(cmdr):
     active, passive = cmdr.get_panels()
     names = active.get_selected_filenames()
     outdir = passive.pwd.get()
-    if '..' in names:
-        showerror('Spam', _("Parrent directory can not be copied"))
+    if ".." in names:
+        showerror("Spam", _("Parrent directory can not be copied"))
         return
     if len(names) == 1:
-        msg = _("Copy file `%(file)s' to %(outdir)s?") % {'file': names[0],
-                                                         'outdir': outdir}
+        msg = _("Copy file `%(file)s' to %(outdir)s?") % {"file": names[0],
+                                                          "outdir": outdir}
     else:
-        msg = _("Copy %(n)d files to %(outdir)s?") % {'n': len(names),
-                                                     'outdir': outdir}
+        msg = _("Copy %(n)d files to %(outdir)s?") % {"n": len(names),
+                                                      "outdir": outdir}
     dlg = AskCopy(
         cmdr.root, title=_("Copy"), message=msg, settings=cmdr.config)
     if not dlg.result:

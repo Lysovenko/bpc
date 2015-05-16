@@ -28,14 +28,14 @@ import buttons
 
 class Face:
     def __init__(self, root):
-        self.config = Config('tkc.ini')
-        root.title('Tkinter Commander')
+        self.config = Config("tkc.ini")
+        root.title("Tkinter Commander")
         root.protocol("WM_DELETE_WINDOW", self.on_delete)
         self.root = root
-        root.geometry(self.config.get('fm_geometry'))
+        root.geometry(self.config.get("fm_geometry"))
         root.grid_columnconfigure(0, weight=1)
         root.grid_rowconfigure(1, weight=1)
-        pw = Panedwindow(root, orient='horizontal', takefocus=False)
+        pw = Panedwindow(root, orient="horizontal", takefocus=False)
         frame = Frame(pw)
         self.left = Panel(frame, Local_fs(), self.config)
         pw.add(frame)
@@ -47,16 +47,16 @@ class Face:
         self.left.activate()
         pw.add(frame)
         pw.pane(frame, weight=1)
-        pw.grid(column=0, row=1, columnspan=2, sticky='senw')
+        pw.grid(column=0, row=1, columnspan=2, sticky="senw")
         self.add_menu()
         self.add_btns()
         root.tk.call(
-            'wm', 'iconphoto', root._w,
-            PhotoImage(file=join(dirname(__file__), 'data', 'favicon.gif')))
+            "wm", "iconphoto", root._w,
+            PhotoImage(file=join(dirname(__file__), "data", "favicon.gif")))
 
     def add_menu(self):
         top = self.root
-        top['menu'] = menubar = Menu(top)
+        top["menu"] = menubar = Menu(top)
         menu_file = Menu(menubar)
         menu_settings = Menu(menubar)
         menu_help = Menu(menubar)
@@ -77,11 +77,11 @@ class Face:
                 (8, _("F8 Remove"), self.on_F8),
                 (10, _("F10 Exit"), self.on_F10)):
             btn = Button(frame, text=text, command=command, takefocus=False)
-            btn.pack(side='left', fill='x', expand=True)
-            root.bind_all('<F%d>' % key, func=command)
+            btn.pack(side="left", fill="x", expand=True)
+            root.bind_all("<F%d>" % key, func=command)
         sz = Sizegrip(frame)
-        sz.pack(side='right', anchor='se')
-        frame.grid(column=0, row=2, columnspan=2, sticky='we')
+        sz.pack(side="right", anchor="se")
+        frame.grid(column=0, row=2, columnspan=2, sticky="we")
 
     def get_panels(self):
         "returns (active, passive) panels"
@@ -90,27 +90,27 @@ class Face:
         return self.right, self.left
 
     def on_delete(self):
-        self.config['fm_geometry'] = self.root.geometry()
+        self.config["fm_geometry"] = self.root.geometry()
         self.config.save()
         self.root.destroy()
 
     def on_F3(self, evt=None):
-        print('F3')
+        print("F3")
 
     def on_F4(self, evt=None):
-        print('F4')
+        print("F4")
 
     def on_F5(self, evt=None):
         buttons.copy_button(self)
 
     def on_F6(self, evt=None):
-        print('F6')
+        print("F6")
 
     def on_F7(self, evt=None):
-        print('F7')
+        print("F7")
 
     def on_F8(self, evt=None):
-        print('F8')
+        print("F8")
 
     def on_F10(self, evt=None):
         self.on_delete()
@@ -124,17 +124,17 @@ def start_face():
     try:
         import gettext
     except ImportError:
-        __builtins__.__dict__['_'] = str
+        __builtins__.__dict__["_"] = str
     else:
-        localedir = join(dirname(__file__), 'i18n', 'locale')
+        localedir = join(dirname(__file__), "i18n", "locale")
         if isdir(localedir):
-            gettext.install('TkC', localedir=localedir)
+            gettext.install("TkC", localedir=localedir)
         else:
-            gettext.install('TkC')
-    root = Tk(className='commander')
+            gettext.install("TkC")
+    root = Tk(className="commander")
     Face(root)
     root.mainloop()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start_face()
