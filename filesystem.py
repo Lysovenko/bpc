@@ -100,9 +100,7 @@ class Filesystem:
             return True
         errors = []
         unaccessible_dirs = []
-        # chdir(self.__pwd)
         for spath, fle_st, far_st, uacc in files:
-            # name = join(spath)
             if any([spath[:len(i)] == i for i in unaccessible_dirs]):
                 errors.append((name, 2))
             f_info = self.list_dir(spath, single=True)
